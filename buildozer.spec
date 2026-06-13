@@ -8,7 +8,7 @@ source.include_exts = py,png,jpg,kv,atlas
 
 version = 1.0
 
-requirements = python3,cython,pygame==2.5.2
+requirements = python3,pygame
 
 orientation = portrait
 fullscreen = 1
