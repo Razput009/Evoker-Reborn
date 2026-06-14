@@ -15,9 +15,8 @@ jobs:
         run: |
           docker run --rm \
             -v ${{ github.workspace }}:/home/user/hostcwd \
-            -e ANDROID_SDK_ROOT=/home/user/.buildozer/android/platform/android-sdk \
-            kivy/buildozer \
-            sh -c "yes | buildozer android debug"
+            -e BUILDOZER_ANDROID_ACCEPT_SDK_LICENSE=1 \
+            kivy/buildozer android debug
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
